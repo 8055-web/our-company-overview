@@ -13,7 +13,7 @@ body {
 
 /* Section layout */
 .over-view-section {
-  padding: 40px 6%;
+  padding: 60px 6%;
 }
 
 .over-view-container {
@@ -21,15 +21,16 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 40px;
 }
 
 /* Text content */
 .over-view-text {
-  flex: 1 1 600px;
+  flex: 1 1 550px;
 }
 
 .over-view-text h2 {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 40px;
   color: #1a1a1a;
@@ -38,6 +39,7 @@ body {
 .over-view-text .description {
   color: #5d5c5c;
   margin-bottom: 30px;
+  font-size: 1rem;
 }
 
 /* Features list */
@@ -100,6 +102,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .btn:hover {
@@ -108,7 +111,7 @@ body {
 
 /* Image */
 .overview-image {
-  flex: 1 1 600px;
+  flex: 1 1 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,11 +119,26 @@ body {
 
 .overview-image img {
   width: 100%;
-  max-width: 494px;
+  max-width: 480px;
   border-radius: 16px;
   object-fit: cover;
   aspect-ratio: 3 / 4;
   background-color: #fff;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
   border: 6px solid #fff;
+}
+
+@media (max-width: 900px) {
+  .overview-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .features {
+    justify-content: center;
+  }
+
+  .overview-image img {
+    max-width: 90%;
+  }
 }
